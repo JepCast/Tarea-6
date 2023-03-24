@@ -15,42 +15,42 @@ static void menu(string name)
         Console.WriteLine("3) Quetzales");
         Console.WriteLine("4) Salir");
         Console.WriteLine();
-        op = Convert.ToInt32(Console.ReadLine());
+            op = Convert.ToInt32(Console.ReadLine());
 
         switch (op)
             {
                 case 1:
-                Console.WriteLine("\nIngrese la cantidad deseada en Euros: ");
-                decimal dolores = 7.80M, quet;
-                quet = Convert.ToDecimal(Console.ReadLine());
-                quet *= dolores;
+                    Console.WriteLine("\nIngrese la cantidad deseada en Euros: ");
+                        decimal dolores = 7.80M, quet;
+                        quet = Convert.ToDecimal(Console.ReadLine());
+                        quet *= dolores;
                 desglose(quet);
                 clean();
                 break;
 
                 case 2:
-                Console.WriteLine("\nIngrese la cantidad deseada en Dolares: ");
-                decimal euros = 8.50M;
-                quet = Convert.ToDecimal(Console.ReadLine());
-                quet *= euros;
+                        Console.WriteLine("\nIngrese la cantidad deseada en Dolares: ");
+                            decimal euros = 8.50M;
+                            quet = Convert.ToDecimal(Console.ReadLine());
+                            quet *= euros;
                 desglose(quet);
                 clean();
                 break;
 
                 case 3:
-                Console.WriteLine("\nIngrese la cantidad deseada en Quetzales: ");
-                quet = Convert.ToDecimal(Console.ReadLine());
-                desglose(quet);
-                clean();
+                        Console.WriteLine("\nIngrese la cantidad deseada en Quetzales: ");
+                            quet = Convert.ToDecimal(Console.ReadLine());
+                            desglose(quet);
+                    clean();
                 break;
 
                 case 4:
-                Console.WriteLine($"\n¡Gracias por tu tiempo!.");
+                        Console.WriteLine($"\n¡Gracias por tu tiempo!.");
                 clean();
                 break;
 
                 default:
-                Console.WriteLine("\nEl dato insertado no es valido.");
+                        Console.WriteLine("\nEl dato insertado no es valido.");
                 break;
         }
     } while ( op !=4);
@@ -147,46 +147,55 @@ static void contrasenia()
 {
     byte oportunidades, tienepermiso;
     string clave;
-    tienepermiso = 0;
-    oportunidades = 0;
+        tienepermiso = 0;
+        oportunidades = 0;
 
     do
     {
-        Console.WriteLine("Digite la Clave: ");
-        clave = HideCharacter().Replace("\r", "");
+       Console.WriteLine("Digite la Clave: ");
+            clave = HideCharacter().Replace("\r", "");
        Console.WriteLine();
         if((clave.Equals("J444")))
             {
-            tienepermiso = 1;
-        } else 
-        { oportunidades++;}
+                tienepermiso = 1;
+            } 
+            else 
+            { 
+            oportunidades++;
+            }
 
-    } while (((oportunidades<3)& (tienepermiso==0)));
+    } 
+    
+    while (((oportunidades<3)& (tienepermiso==0)));
+    
     if (tienepermiso == 1)
     {
         string name;
-        Console.WriteLine("\nHola, bienvenid@ a continuación inserta tu nombre: ");
-        name = Console.ReadLine();
-        menu(name);
+            Console.WriteLine("\nHola, bienvenid@ a continuación inserta tu nombre: ");
+                name = Console.ReadLine();
+            menu(name);
     }
-    else {
+    else 
+    {
         Console.WriteLine("Oportunidades terminadas.");
-            }        
+    }        
 }
 
 static string HideCharacter()
 {
     ConsoleKeyInfo Key;
-    String code = "";
+        String code = "";
     do
     {
         Key = Console.ReadKey(true);
-        if (Char.IsLetterOrDigit(Key.KeyChar))
-        {
-            Console.Write("*");
-        }
+            if (Char.IsLetterOrDigit(Key.KeyChar))
+            {
+                Console.Write("*");
+            }
         code += Key.KeyChar;
-    } while (Key.Key != ConsoleKey.Enter);
+    } 
+    
+    while (Key.Key != ConsoleKey.Enter);
     return code;
 }
 
