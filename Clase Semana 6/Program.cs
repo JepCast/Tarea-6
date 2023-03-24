@@ -1,4 +1,6 @@
-﻿try
+﻿//Acá inicia todo chan chan chan!!!
+
+try
 {
     //Inicio solicitando la contraseña
     contrasenia();
@@ -208,23 +210,13 @@ static string HideCharacter()
 
 //Este static es para así limpiar la consola.
 static void CleanC()
-{
-    Console.ReadKey();
-    Console.Clear();
-}
-
+    {
+        Console.ReadKey();
+        Console.Clear();
+    }
 
 }
 catch
 {
-    Console.WriteLine("El dato, o acción realizada no es valida. ");
+    Console.WriteLine("\nEl dato, o acción realizada no es valida... ");
 }
-//Habilitarlo para que acepte billetes de 200 (Listo)
-//Que acepte el desgloce de monedas (Listo)
-//Al momento que recibamos una cantidad desglosar en un lado los billetes y en otra las monedas. (Listo)
-//Le pondremos un menu con multiples opciones (Listp)
-//Cambiar para que la contraseña sea alfanumerica (Listo).
-
-
-
-
